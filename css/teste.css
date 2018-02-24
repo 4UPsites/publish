@@ -1,0 +1,220 @@
+body{
+	background-color: 	#A9A9A9;
+	text-align: center;
+	font-style: Comic Sans MS;
+	
+}
+
+.popup {
+    position : fixed;
+	right: 0;
+    left: 0;
+}
+.display_none {
+	display: none;
+}
+.ball:nth-child(1) {
+    -webkit-animation: right 0s infinite ease-in-out;
+    -moz-animation: right 0s infinite ease-in-out;
+    animation: right 0s infinite ease-in-out;
+}
+.ball.max_1:nth-child(1) {
+    -webkit-animation: right 0.5s infinite ease-in-out;
+    -moz-animation: right 0.5s infinite ease-in-out;
+    animation: right 0.5s infinite ease-in-out;
+}
+.ball.max_2:nth-child(1) {
+    -webkit-animation: right 0.4s infinite ease-in-out;
+    -moz-animation: right 0.4s infinite ease-in-out;
+    animation: right 0.4s infinite ease-in-out;
+}
+.ball.max_3:nth-child(1) {
+    -webkit-animation: right 0.3s infinite ease-in-out;
+    -moz-animation: right 0.3s infinite ease-in-out;
+    animation: right 0.3s infinite ease-in-out;
+}
+.ball.max_4:nth-child(1) {
+    -webkit-animation: right 0.2s infinite ease-in-out;
+    -moz-animation: right 0.2s infinite ease-in-out;
+    animation: right 0.2s infinite ease-in-out;
+}
+.ball.max_4:nth-child(1) {
+    -webkit-animation: right 0.1s infinite ease-in-out;
+    -moz-animation: right 0.1s infinite ease-in-out;
+    animation: right 0.1s infinite ease-in-out;
+}
+@-webkit-keyframes right {
+    0% {
+        -webkit-transform: translate(-15px);
+    }
+    50% {
+        -webkit-transform: translate(15px);
+    }
+    100% {
+        -webkit-transform: translate(-15px);
+    }
+}
+@-webkit-keyframes left {
+    0% {
+        -webkit-transform: translate(15px);
+    }
+    50% {
+        -webkit-transform: translate(-15px);
+    }
+    100% {
+        -webkit-transform: translate(15px);
+    }
+}
+@-moz-keyframes right {
+    0% {
+        -moz-transform: translate(-15px);
+    }
+    50% {
+        -moz-transform: translate(15px);
+    }
+    100% {
+        -moz-transform: translate(-15px);
+    }
+}
+@-moz-keyframes left {
+    0% {
+        -moz-transform: translate(15px);
+    }
+    50% {
+        -moz-transform: translate(-15px);
+    }
+    100% {
+        -moz-transform: translate(15px);
+    }
+}
+
+@keyframes right {
+    0% {
+        transform: translate(-15px);
+    }
+    50% {
+        transform: translate(15px);
+    }
+    100% {
+        transform: translate(-15px);
+    }
+}
+@keyframes left {
+    0% {
+        transform: translate(15px);
+    }
+    50% {
+        transform: translate(-15px);
+    }
+    100% {
+        transform: translate(15px);
+    }
+}
+.progress-bar {
+	background-color: black;
+}
+.balls_ {
+	display: inline-block; 
+	width: 100%; 
+	color: white; 
+	height: 20vh;
+}
+.ball_2 {
+    display: none; 
+    float:left; 
+    padding: 5px 15px;
+}
+.ball_3 {
+    display: none; 
+    float:right; 
+    padding: 5px 15px;
+}
+.ball_0 {
+    display: none; 
+    float:left; 
+    padding: 5px 15px; 
+    position: relative; 
+    top: -80px; 
+    left: 5px;
+}
+.ball_1 {
+    display: none; 
+    float:right; 
+    padding: 5px 15px; 
+    position: relative; 
+    top: -80px; 
+    right: 5px;
+}
+.row {
+    padding: 30px 25px; 
+    background: rgba(255,255,255,.1); 
+    border: 1px solid white; 
+    border-radius: 100%;
+}
+.main {
+    display: inline-block; 
+    padding: 15px 12px;
+}
+.page-header {
+    font-family: FuturaBookBT;
+}
+.page-header h2 {
+    font-size: 25px;
+}
+.page-header span {
+    font-size: 17px; 
+    display: inline-block; 
+    margin-bottom: 15px;
+}
+.page-footer {
+    display: inline-block; 
+    position: absolute; 
+    width: 100%; 
+    color: white; 
+    font-size: 26px; 
+    height: 15vh; 
+    left: 0; 
+    right: 0;
+}
+.page-footer span {
+    width: 100%; 
+    font-size: 15px; 
+    display: inline-block; 
+    margin-top: 15px;
+}
+.container {
+    position: relative; 
+    display: flex; 
+    width: 100%; 
+    justify-content: center; 
+    color: white; 
+    cursor: pointer; 
+    height: 45vh;
+}
+#indentifier.mobile .page-header h2 {
+    font-size: 55px;
+}
+#indentifier.mobile .page-header span {
+    font-size: 35px;
+}
+#indentifier.mobile .row {
+    padding: 100px 50px;
+}
+#indentifier.mobile .page-footer {
+    font-size: 60px;
+}
+#indentifier.mobile .progress {
+    height: 40px;
+    font-size: 30px;
+    line-height: 38px;
+}
+#indentifier.mobile .progress-bar {
+    font-size: 30px;
+    line-height: 35px;
+}
+#indentifier.mobile .container {
+    height: 40vh;
+}
+#indentifier.mobile .page-footer span {
+    font-size: 29px;
+}
