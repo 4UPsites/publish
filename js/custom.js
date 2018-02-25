@@ -1,3 +1,5 @@
+var ball_template = $('#ball_4').html();
+
 function dateDifferenceDay() {
 
 	var initialDate = Date.UTC(2018, 1, 24);
@@ -23,50 +25,51 @@ function dateDifferenceDay() {
 }
 
 function ballShow() {
-	$( ".ball" ).hover(function() {
-
-		if (!$(".ball").hasClass('active')) {
-			ballMax ();
+	$(".ball").hover(function() {
+		if ($('#'+$(this)[0].id).hasClass('active')) {
+			$('#'+$(this)[0].id).removeClass('active');
+			ballMax ($(this));
 		}
 	});
-	function ballMax () {
-		$(".ball").addClass("active");
-		$(".ball").addClass("max_1");
+	function ballMax (ball) {
+		$('#'+ball[0].id).addClass("max_1");
 
 		setTimeout(function() {
-			$(".ball").removeClass("max_1");
-	 		$(".ball").addClass("max_2");
+			$('#'+ball[0].id).removeClass("max_1");
+			$('#'+ball[0].id).addClass("max_2");
 		}, 250);
 	  	setTimeout(function() {
-	  		$(".ball").removeClass("max_2");
-	 		$(".ball").addClass("max_3");
+			$('#'+ball[0].id).removeClass("max_2");
+			$('#'+ball[0].id).addClass("max_3");
 		}, 500);
   		setTimeout(function() {
-	  		$(".ball").removeClass("max_3");
-	 		$(".ball").addClass("max_4");
+			$('#'+ball[0].id).removeClass("max_3");
+			$('#'+ball[0].id).addClass("max_4");
 		}, 750);
 		setTimeout(function() {
-	  		ballHideAndShow ();
+	  		ballHideAndShow ($('#'+ball[0].id));
 	  		if ($("#indentifier").hasClass('mobile')) {
-			   	$(".ball").fadeIn(); 
-	 			$(".ball").removeClass("max_4");
+				$('#'+ball[0].id).fadeIn(); 
+				$('#'+ball[0].id).removeClass("max_4");
 			}
 		}, 1000);
 	}
-	function ballHideAndShow () {
+	function ballHideAndShow (ball) {
 		var math = Math.floor(Math.random()*(4));
-		$(".ball").fadeOut();
-		$(".balls_ .ball_" + math).html($(".ball").html());
-		$(".balls_ .ball_" + math).fadeIn();
+		$('#'+ball[0].id).fadeOut();
+		$('#'+ball[0].id).removeClass('max_4');
+		$(".balls_ #ball_" + math).html(ball_template);
+		$(".balls_ #ball_" + math).addClass('active');
+		$(".balls_ #ball_" + math).fadeIn();
 	}
 }
 
 function mobile () {
 	if (screen.width < 640 || screen.height < 480) {
 	    $("#indentifier").addClass('mobile');
-	    $("#indentifier span div").removeClass('ball_0');
-	    $("#indentifier span div").removeClass('ball_1');
-	    $("#indentifier span div").removeClass('ball_2');
-	    $("#indentifier span div").removeClass('ball_3');
+	    $("#indentifier span div").removeId('ball_0');
+	    $("#indentifier span div").removeId('ball_1');
+	    $("#indentifier span div").removeId('ball_2');
+	    $("#indentifier span div").removeId('ball_3');
 	}
 }
