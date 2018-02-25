@@ -1,4 +1,4 @@
-var ball_template = $('#ball_4').html();
+var ball_template;
 var isMobile;
 
 function dateDifferenceDay() {
@@ -23,6 +23,7 @@ function dateDifferenceDay() {
 		$(".progress-bar-striped").css('width', "10%");
 		$(".progress-bar-striped").text("10%");
 	}
+	ball_template = $('#ball_4').html()
 }
 
 function ballShow() {
