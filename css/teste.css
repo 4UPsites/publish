@@ -119,17 +119,17 @@ body{
 	color: white; 
 	height: 20vh;
 }
-#ball_2 {
+.ball_2 {
     display: none; 
     float:left; 
     padding: 5px 15px;
 }
-#ball_3 {
+.ball_3 {
     display: none; 
     float:right; 
     padding: 5px 15px;
 }
-#ball_0 {
+.ball_0 {
     display: none; 
     float:left; 
     padding: 5px 15px; 
@@ -137,7 +137,7 @@ body{
     top: -80px; 
     left: 5px;
 }
-#ball_1 {
+.ball_1 {
     display: none; 
     float:right; 
     padding: 5px 15px; 
@@ -190,31 +190,4 @@ body{
     color: white; 
     cursor: pointer; 
     height: 45vh;
-}
-#indentifier.mobile .page-header h2 {
-    font-size: 55px;
-}
-#indentifier.mobile .page-header span {
-    font-size: 35px;
-}
-#indentifier.mobile .row {
-    padding: 100px 50px;
-}
-#indentifier.mobile .page-footer {
-    font-size: 60px;
-}
-#indentifier.mobile .progress {
-    height: 40px;
-    font-size: 30px;
-    line-height: 38px;
-}
-#indentifier.mobile .progress-bar {
-    font-size: 30px;
-    line-height: 35px;
-}
-#indentifier.mobile .container {
-    height: 40vh;
-}
-#indentifier.mobile .page-footer span {
-    font-size: 29px;
 }
