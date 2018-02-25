@@ -1,4 +1,5 @@
 var ball_template = $('#ball_4').html();
+var isMobile;
 
 function dateDifferenceDay() {
 
@@ -25,12 +26,21 @@ function dateDifferenceDay() {
 }
 
 function ballShow() {
-	$(".ball").hover(function() {
-		if ($('#'+$(this)[0].id).hasClass('active')) {
-			$('#'+$(this)[0].id).removeClass('active');
-			ballMax ($(this));
-		}
-	});
+	if (isMobile) {
+		$(".ball").on('touchstart', function() {
+			if ($('#'+$(this)[0].id).hasClass('active')) {
+				$('#'+$(this)[0].id).removeClass('active');
+				ballMax ($(this));
+			}
+		});
+	} else {
+		$(".ball").hover(function() {
+			if ($('#'+$(this)[0].id).hasClass('active')) {
+				$('#'+$(this)[0].id).removeClass('active');
+				ballMax ($(this));
+			}
+		});
+	}
 	function ballMax (ball) {
 		$('#'+ball[0].id).addClass("max_1");
 
@@ -47,29 +57,28 @@ function ballShow() {
 			$('#'+ball[0].id).addClass("max_4");
 		}, 750);
 		setTimeout(function() {
-	  		ballHideAndShow ($('#'+ball[0].id));
-	  		if ($("#indentifier").hasClass('mobile')) {
-				$('#'+ball[0].id).fadeIn(); 
-				$('#'+ball[0].id).removeClass("max_4");
-			}
+			ballHideAndShow ($('#'+ball[0].id));
+			$('#'+ball[0].id).removeClass("max_4");
 		}, 1000);
 	}
 	function ballHideAndShow (ball) {
-		var math = Math.floor(Math.random()*(4));
-		$('#'+ball[0].id).fadeOut();
-		$('#'+ball[0].id).removeClass('max_4');
-		$(".balls_ #ball_" + math).html(ball_template);
-		$(".balls_ #ball_" + math).addClass('active');
-		$(".balls_ #ball_" + math).fadeIn();
+		if (typeof(isMobile)!==undefined && isMobile!==null && isMobile) {
+			$('#'+ball[0].id).fadeOut();
+			$('#'+ball[0].id).addClass('active');
+			$('#'+ball[0].id).fadeIn();
+		} else {
+			var math = Math.floor(Math.random()*(4));
+			$('#'+ball[0].id).fadeOut();
+			$(".balls_ #ball_" + math).html(ball_template);
+			$(".balls_ #ball_" + math).addClass('active');
+			$(".balls_ #ball_" + math).fadeIn();
+		}
 	}
 }
 
 function mobile () {
 	if (screen.width < 640 || screen.height < 480) {
-	    $("#indentifier").addClass('mobile');
-	    $("#indentifier span div").removeId('ball_0');
-	    $("#indentifier span div").removeId('ball_1');
-	    $("#indentifier span div").removeId('ball_2');
-	    $("#indentifier span div").removeId('ball_3');
+		$("#indentifier").addClass('mobile');
+		isMobile = true;
 	}
 }
