@@ -14,16 +14,15 @@ function dateDifferenceDay() {
 	var currentDate = Date.UTC(year, month, day);
 
 	var differenceDate = Math.floor((currentDate - initialDate) / ( 1000 * 60 * 60 * 24));
-	
-	if ($(".progress-bar-striped").text() != "100%" && differenceDate> 5 ) {
+	if (false && $(".progress-bar-striped").text() != "100%" && differenceDate> 5 ) {
 		differenceDate = differenceDate * 2;
 		$(".progress-bar-striped").css('width', differenceDate + "%");
 		$(".progress-bar-striped").text(differenceDate + "%");
 	} else {
-		$(".progress-bar-striped").css('width', "10%");
-		$(".progress-bar-striped").text("10%");
+		$(".progress-bar-striped").css('width', "100%");
+		$(".progress-bar-striped").text("100%");
 	}
-	ball_template = $('#ball_4').html()
+	ball_template = $('#ball_4').html();
 }
 
 function ballShow() {
