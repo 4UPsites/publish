@@ -2,7 +2,7 @@ var ball_template;
 var isMobile;
 
 function dateDifferenceDay() {
-
+/*
 	var initialDate = Date.UTC(2018, 1, 24);
 	
 	var data = new Date();
@@ -23,7 +23,11 @@ function dateDifferenceDay() {
 		$(".progress-bar-striped").css('width', "10%");
 		$(".progress-bar-striped").text("10%");
 	}
-	ball_template = $('#ball_4').html()
+	ball_template = $('#ball_4').html();
+*/
+	$(".progress-bar-striped").css('width', "99%");
+	$(".progress-bar-striped").text("99%");
+	ball_template = $('#ball_4').html();
 }
 
 function ballShow() {
