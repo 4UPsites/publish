@@ -1,74 +1,76 @@
+<!DOCTYPE html>
 <html>
-	
-	<head>
-    	<meta charset="utf-8">
-		<meta name="description" content="4UPsites corporation website">
-		<meta name="keywords" content="4UP, site, meu site, desenvolvedora, criar.">
-		<meta name="author" content="Devs4UPsites">
+  <head>
+    <meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    	<title>4UPSITES</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-    	<link href="css/custom.css" rel="stylesheet">
-		<link href="futura-bk-bt/font.css" rel="stylesheet">
-		<link href="icomoon/style.css" rel="stylesheet">
-		
-  	</head>
-	<body style="background-image: url('wallpaper.jpg');">
+      <title>4UpSites</title>
 
-		<div id="indentifier">
-			<div class="container_all">
-				<span class="balls_">
-					<div id="ball_2" class="ball ball_2">
-					</div>
-					<div id="ball_3" class="ball ball_3">
-					</div>
-				</span>
-				<div class="container">
-					<div id="ball_4" class="ball active">
-						<div class="row">
-							<div role="main">
-								<div class="page-header">
-									<h2>4UPSITES</h2>
-									<span> Em Construção<br>
-									Está quase pronto para bombar</span>
-									<div class="progress">
-										<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:0%">0%</div>
-									</div>
-								</div>
-						   </div>
-						</div>
-					</div>
-				</div>
-				<span class="balls_">
-					<div id="ball_0" class="ball ball_0">
-					</div>
-					<div id="ball_1" class="ball ball_1">
-					</div>
-				</span>
+		<link rel="stylesheet" type="text/css" href="icomoon/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+  </head>
+  <body class="opacity">
+    <div id="popup">
+      <div class="container">
+        <i class="icon-relogio"></i>
+    		<span>Em breve esta página estará disponível!</span>
+	    	<strong onclick="popupHidden();">x</strong>
+    	</div>
+    </div>
+
+		<header>
+			<nav>
+				<span>4UpSites</span>
+				<ul>
+					<li><a class="active" href="index.html">home</a></li>
+					<li><a onclick="popupShow();" class="in_scroll">suporte</a></li>
+					<li><a onclick="popupShow();" >equipe</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="container">
+			<div class="container_banner">
+				<img src="tech.jpg" />
 			</div>
-	
-			<div class="page-footer">
-				<i class="icon-whatsapp"></i>
-				<i class="icon-face"></i>
-				<i class="icon-twitter"></i>
-				<span>
-					E-mail: <label style="text-decoration: underline;">contato@4upsites.com</label>
-				</span>
+			<div class="main">
+				<span>Sobre</span>
+				<div>
+					<p>
+            4UpSites é uma empresa que tem seu foco na criação de sites institucionais para empresas que desejam entrar no mundo digital.<br>
+            A empresa é composta por cinco integrantes, sendo dois especialistas em front-end, outros dois em back-end e um testador de softwares
+            <br>
+            <br>
+            <br>
+            Em breve vamos ter nosso site finalizado com todas as informações.<br>Mas já é possivel entrar em contato conosco atravéz do e-mail contato@4upsites.com.br
+          </p>
+				</div>
 			</div>
 		</div>
-		
-		<script src="js/jquery.js"></script>
-		<script src="js/custom.js"></script>  
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-	</body>
-	
-	<script>
-		$(document).ready(function() {
-			mobile();
-			dateDifferenceDay();
-			ballShow();
-		});
-	</script>
+		<footer>
+			<div id="footer">
+				<div class="social">
+					<div>
+						<strong>(54) 9 9196 - 4688</strong>
+						<span>
+							<i class="icon-whatsapp"></i>
+						</span>
+					</div>
+					<a href="https://www.instagram.com/4upsites/" target="_blank">
+						<i class="icon-instagran padding"></i>
+					</a>
+					<a href="https://twitter.com/4UPsites" target="_blank">
+						<i class="icon-twitter padding"></i>
+					</a>
+					<a href="https://facebook.com/4UPsites/?ref=bookmarks" target="_blank">
+						<i class="icon-face padding"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   	<script type="text/javascript" src="js/custom.js"></script>
+  </body>
 </html>
