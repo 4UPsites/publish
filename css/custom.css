@@ -148,19 +148,20 @@ body {
 .desktop .social .padding {
 	padding: 15px;
 }
-.desktop .main {
+.desktop #container div {
 	display: inline-block; 
 	width: 100%; 
 	z-index: 8; 
 	position: relative; 
 	background-color: white;
 }
-.desktop .main div p {
+
+.desktop #container div p {
 	padding: 0 200px 30px 200px; 
 	font-size: 15px; 
 	text-align: center;
 }
-.desktop .main span {
+.desktop #container span {
 	font-size: 18px; 
 	font-family: 'Montserrat', sans-serif; 
 	font-weight: bold; 
@@ -363,19 +364,19 @@ body {
 .mobile .social .padding {
 	padding: 15px;
 }
-.mobile .main {
+.mobile #container div {
 	display: inline-block; 
 	width: 100%; 
 	z-index: 8; 
 	position: relative; 
 	background-color: white;
 }
-.mobile .main div p {
+.mobile div div p {
 	padding: 0 10px 10px;
 	font-size: 15px; 
 	text-align: center;
 }
-.mobile .main span {
+.mobile div span {
 	font-size: 18px; 
 	font-family: 'Montserrat', sans-serif; 
 	font-weight: bold; 
@@ -424,4 +425,17 @@ body {
     background-image: url(../pattern.png);
     background-repeat: repeat;
     z-index: 2;
+}
+.institucional-sites {
+	margin-top: 80px;
+}
+#container .institucional-sites p:not(:last-child) {
+	padding-bottom: 0px;
+}
+#container .institucional-sites .five-reasons-why p {
+	padding-top: 0px;
+}
+#container .institucional-sites .five-reasons-why p span {
+	padding-top: 0px;
+	font-size: 16px;
 }
