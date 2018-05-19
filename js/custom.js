@@ -1,6 +1,7 @@
 $(document).ready(function() {
     if (screen.width < 1024 || screen.height < 768) {
     	$("body").addClass('mobile');
+    	$("#footer .social strong").append("<big>x</big>");
 	} else {
 		$("body").addClass('desktop');
 	}
@@ -12,7 +13,14 @@ $(document).ready(function() {
 		$(".desktop .social strong").hide();
 	});
 	$(".mobile .icon-whatsapp").click(function() {
-	    $(".mobile .social strong").show();
+		if ($(".mobile .social strong").is(":visible")) {
+			$(".mobile .social strong").hide();				
+		} else {
+	    	$(".mobile .social strong").show();
+	    }
+	});
+	$(".mobile #footer .social big").click(function() {
+	    $(".mobile .social strong").hide();
 	});
 });
 
